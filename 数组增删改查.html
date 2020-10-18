@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 数组中间插入
+			// var arr = [1, 2, 3, 4, 5]
+			// for (var i = arr.length - 1; i >= 2; i--) {
+			// 	arr[i + 1] = arr[i];
+			// }
+			// // arr[2] = 6;
+			// console.log(arr);
+			// console.log(arr.length)
+			
+			// // 数组末尾删除一个
+			// arr.length--;
+			// console.log(arr)
+			// console.log(arr[6])
+			// // 数组开头删除
+			// for(var i = 1 ; i<arr.length;i++){
+			// 	arr[i-1]=arr[i];
+			// }
+			// arr.length--;
+			// console.log(arr)
+			
+			
+			// 翻转数组 不使用新数组
+			var arr = [1,2,3,4,5,6];
+			for (var i = 0 ; i<arr.length/2;i++){
+				var temp = arr[i];
+				arr[i]=arr[arr.length-1-i];
+				arr[arr.length-1-i]=temp;
+			}
+			console.log(arr)
+			
+			
+			
+			
+		</script>
+
+	</body>
+</html>

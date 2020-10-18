@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button>点击生成</button>
+    <!-- <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul> -->
+    <script>
+      // 第一种
+      //   var arr = ["周杰伦", "赵丽颖", "大幂幂", "胡歌", "蔡徐坤"];
+      //   var btn = document.querySelector("button");
+      //   btn.onclick = function () {
+      //     var str = "<ul>";
+      //     for (var i = 0; i < arr.length; i++) {
+      //       str += "<li>" + arr[i] + "</li>";
+      //     }
+      //     str += "</ul>";
+      //     document.body.innerHTML += str;
+
+      //     var ulNode = document.querySelector("ul");
+      //     var lis = ulNode.querySelectorAll("li");
+      //     for (var j = 0; j < lis.length; j++) {
+      //       if (j % 2 == 0) {
+      //         lis[j].style.backgroundColor = "hotpink";
+      //       } else {
+      //         lis[j].style.backgroundColor = "skyblue";
+      //       }
+      //     }
+      //   };
+
+      // 第二种
+      var arr = ["周杰伦", "赵丽颖", "大幂幂", "胡歌", "蔡徐坤"];
+      var btn = document.querySelector("button");
+      btn.onclick = function () {
+        var ulNode = document.createElement("ul");
+        for (var i = 0; i < arr.length; i++) {
+          var lis = document.createElement("li");
+          lis.innerHTML = arr[i];
+          if (i % 2 == 0) {
+            lis.style.backgroundColor = "hotpink";
+          } else {
+            lis.style.backgroundColor = "skyblue";
+          }
+          ulNode.appendChild(lis);
+        }
+        document.body.appendChild(ulNode);
+      };
+    </script>
+  </body>
+</html>

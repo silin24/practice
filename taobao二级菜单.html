@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .navlist {
+        position: relative;
+        width: 200px;
+        height: 150px;
+        background-color: #bfa;
+      }
+      .navlist > li {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        box-sizing: border-box;
+        border-bottom: 1px solid purple;
+      }
+      .navlist .navin {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 200px;
+        width: 400px;
+        height: 300px;
+        background-color: pink;
+      }
+      .navlist .navin li {
+        height: 100px;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="navlist">
+      <li>
+        <a href="javascript:;">服装</a>
+        <ul class="navin">
+          <li>T恤</li>
+          <li>衬衣</li>
+          <li>内衣</li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript:;">服装</a>
+        <ul class="navin">
+          <li>屁用</li>
+          <li>衬衣</li>
+          <li>内衣</li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript:;">服装</a>
+        <ul class="navin">
+          <li>月份</li>
+          <li>衬衣</li>
+          <li>内衣</li>
+        </ul>
+      </li>
+    </ul>
+    <script>
+      var lis = document.querySelectorAll(".navlist>li");
+      var navins = document.querySelectorAll(".navin");
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].index = i;
+        lis[i].onmouseover = function () {
+          navins[this.index].style.display = "block";
+        };
+        lis[i].onmouseout = function () {
+          navins[this.index].style.display = "none";
+        };
+      }
+    </script>
+  </body>
+</html>

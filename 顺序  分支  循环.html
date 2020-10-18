@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 顺序  分支  循环
+			// var score = parseInt(prompt('请输入你的分数：'))
+			// switch(true){
+			// 				case score >= 90 && score <= 100:
+			// 					alert('A');
+			// 					break;
+			// 				case score >= 80 && score < 90:
+			// 					alert('B');
+			// 					break;
+			// 				case score >= 70 && score < 80:
+			// 					alert('C');
+			// 					break;
+			// 				case score >= 60 && score < 70:
+			// 					alert('D');
+			// 					break;
+			// 				case score < 0 || score > 100:
+			// 					alert('请重新输入合法的分数！');
+			// 					break;
+			// 				default:
+			// 					alert('不及格，重修去吧~！');
+			// 					break;
+			// 			}
+			var num = parseInt(prompt('请输入要加汽油的标号'))
+			var oils = parseFloat(prompt('请输入加油量：'))
+			if (num == 92) {
+				if (oils <= 30 && oils > 0) {
+					var money = oils * 5;
+					alert('你一共花费：' + money + '元');
+				} else if(oils>30) {
+					var money = oils * 4;
+					alert('你一共花费：' + money + '元')
+				} else {
+					alert('请输入正确的加油量')
+				}
+			} else {
+				if (oils <= 40 && oils > 0) {
+					var money = oils * 6;
+					alert('你一共花费：' + money + '元');
+				} else if (oils>40) {
+					var money = oils * 5;
+					alert('你一共花费：' + money + '元')
+				} else {
+					alert('请输入正确的加油量')
+				}
+			}
+		</script>
+
+	</body>
+</html>

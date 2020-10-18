@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: #bfa;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      // onmousemove  移动
+      // onmouseover/onmouseout  经过，移入/移出
+      // onmouseenter/onmouseleave  移入/移出
+      // onmousedown/onmouseup   按下/弹起
+
+      var box = document.querySelector("div");
+      //   box.onmouseenter = function () {
+      //     box.style.width = "300px";
+      //     this.style.height = "300px";
+      //     this.style.backgroundColor = "pink";
+      //   };
+      //   box.onmouseover = function () {
+      //     box.style.width = "300px";
+      //     this.style.height = "300px";
+      //     this.style.backgroundColor = "pink";
+      //   };
+
+      var flag = true;
+      box.addEventListener("click", function () {
+        if (flag) {
+          this.style.backgroundColor = "pink";
+          //flag = false
+        } else {
+          this.style.backgroundColor = "skyblue";
+          //flag = true
+        }
+        flag = !flag;
+      });
+    </script>
+  </body>
+</html>

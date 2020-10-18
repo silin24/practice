@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        background-color: #bfa;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <a href="https://www.baidu.com">hahaha</a>
+    <script>
+      var aa = document.querySelector("a");
+      aa.addEventListener("click", function () {
+        aa.href = "https://www.taobao.com";
+      }); -->
+    <!-- </script> -->
+
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <p>111</p>
+    <script>
+      var ps = document.querySelectorAll("p");
+      for (var i = 0; i < ps.length; i++) {
+        ps[i].onclick = function () {
+          for (var j = 0; j < ps.length; j++) {
+            ps[j].innerHTML = "哈哈哈";
+          }
+          // 这里不能用ps[i]，因为在点击事件点击之前，for循环已经结束，此时的i不满足< ps.length，所以p[i]是找不到的
+
+          this.innerHTML = "爽";
+        };
+      }
+    </script>
+  </body>
+</html>

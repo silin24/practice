@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+      table {
+        width: 500px;
+        margin: 100px auto;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      td,
+      th {
+        border: 1px solid #333;
+      }
+
+      thead tr {
+        height: 40px;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>科目</th>
+          <th>成绩</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script type="text/javascript">
+      var datas = [
+        {
+          name: "魏璎珞",
+          subject: "JavaScript",
+          score: 100,
+        },
+        {
+          name: "弘历",
+          subject: "JavaScript",
+          score: 98,
+        },
+        {
+          name: "傅恒",
+          subject: "JavaScript",
+          score: 99,
+        },
+        {
+          name: "明玉",
+          subject: "JavaScript",
+          score: 88,
+        },
+        {
+          name: "大猪蹄子",
+          subject: "JavaScript",
+          score: 0,
+        },
+      ];
+      var tbody = document.querySelector("tbody");
+      for (var i = 0; i < datas.length; i++) {
+        // 创建行
+        var tr = document.createElement("tr");
+        tbody.appendChild(tr);
+        for (var k in datas[i]) {
+          var td = document.createElement("td");
+          td.innerHTML = datas[i][k];
+          tr.appendChild(td);
+        }
+        var td = document.createElement("td");
+        td.innerHTML = '<a href="javascript:;">删除</a>';
+        tr.appendChild(td);
+      }
+      // 删除
+      var as = document.querySelectorAll("a");
+      // for (var i = 0 ; i<as.length;i++){
+      // 	as[i].onclick = function(){
+      // 		tbody.removeChild(this.parentNode.parentNode)
+      // 	}
+      // }
+      //事件委托
+      var tb = document.querySelector("table");
+      tb.addEventListener("click", function (e) {
+        tbody.removeChild(e.target.parentNode.parentNode);
+      });
+    </script>
+  </body>
+</html>

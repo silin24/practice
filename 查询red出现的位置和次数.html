@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 查询red出现的位置和次数
+			var arr = ['red','blue','red','green','pink','red','yellow'];
+			var index = arr.indexOf('red');
+			var num = 0;
+			// console.log(index)
+			while(index !== -1){
+				console.log(index);
+				num++;
+				index = arr.indexOf('red',index+1);
+			}
+			console.log('red出现的次数是：'+num)
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 求质数
+			// 方法1
+			// var num = 0;
+			// for (var i = 100; i<=200;i++){
+			// 	for(var j = 1 ;j<=i ; j++){
+			// 		if(i%j==0){
+			// 			num++;
+			// 		}	
+			// 	}
+			// 	if(num==2){
+			// 		console.log(i);
+			// 	}
+			// 	num = 0;
+			// }
+
+			//方法2
+			// var flag = true;
+			// for(var i = 100 ; i <=200 ; i++){
+			// 	for(var j = 2 ; j<i ; j++){
+			// 		if (i%j==0){
+			// 		flag = false;
+			// 		break;
+			// 	}}
+			// 	if(flag){
+			// 		console.log(i);
+			// 	}
+			// 	flag = true;
+
+			// }
+
+			//  求1！+2！+3！+……+20！
+
+			// var ride = 1;
+			// var sum = 0;
+			// for (var i = 1;i<=20;i++){
+			// 	for(var j = 1 ; j<=i ; j++){
+			// 		ride *=j
+
+
+			// 	}
+			// 	sum +=ride;
+			// 	ride = 1;
+
+			// }
+			// console.log(sum)
+
+
+			for (var i = 0; i < 7; i++) {
+				for (var j = 0; j < 6 - i; j++) {
+					// console.log('')
+					document.write('&nbsp;')
+				}
+				for (var k = 0; k < 2 * i + 1; k++) {
+					// console.log('★')
+					document.write('★')
+				}
+				// console.log('\n')
+				document.write('<br>')
+			}
+		</script>
+	</body>
+</html>

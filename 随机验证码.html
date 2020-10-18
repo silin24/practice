@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// function getRandom(min, max) {
+			// 	return Math.floor(Math.random() * (max - min + 1)) + min;
+			// }
+			// var str = 'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM'
+			// var targetStr = '';
+			// for (var i = 0; i < 8; i++) {
+			// 	targetStr += str[getRandom(0, str.length - 1)]
+			// }
+			// console.log(targetStr)
+			
+			function getRandomCode(len){
+				var str = 'qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM'
+				var targetStr = '';
+				for (var i = 0; i < len; i++) {
+					targetStr += str[Math.floor(Math.random()*str.length)]
+				}
+				return targetStr
+			}
+			
+			console.log(getRandomCode(6))
+			
+			
+			
+		</script>
+	</body>
+</html>

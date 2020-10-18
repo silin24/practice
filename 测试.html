@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function foo() {
+      //     console.log(this.a);
+      //     console.log(this);
+      //   }
+
+      //   function active(fn) {
+      //     fn();
+      //     console.log(this);
+      //   }
+
+      //   var a = 20;
+      //   var obj = {
+      //     a: 10,
+      //     getA: foo,
+      //     active: active,
+      //   };
+      //   //   active(obj.getA);
+      //   obj.active(obj.getA);
+      //   fn();
+
+      //   var fn = function () {
+      //     console.log(110);
+      //   };
+      //   fn();
+      const array1 = [1, 4, 9, 16];
+
+      // pass a function to map
+      const map1 = array1.map(function (ietm) {
+        return ietm * 2;
+      });
+      console.log(map1);
+    </script>
+  </body>
+</html>

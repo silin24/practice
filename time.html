@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// var obj = {
+			// 	name:'keke',
+			// 	type:'tugou',
+			// 	age:15,
+			// 	sayHi:function(){
+			// 		console.log('你好')
+			// 	}
+			// }
+			// console.log(obj.name);
+			// obj.sayHi()
+
+
+			// var obj = new Object()
+			// obj.name = 'keke';
+			// obj,age = 12;
+			// obj.type = 'tugou'
+			// obj.sayHi=function(){
+			// 	console.log('hi~');
+			// }
+			// console.log(obj.name);
+			// obj.sayHi()
+
+
+
+			// console.log(Math.PI)
+			// console.log(Math.max(1, 2, 6))
+			// console.log(Math.max())
+			// console.log(Math.max(1, 2, 'dlk'))
+			// console.log(Math.round(-1.6))
+			// console.log(Math.round(-1.5))
+			// console.log(Math.random())
+
+			var date = new Date(2020, 9, 4);
+			console.log(date)
+			var date = new Date('2020-9-4');
+			console.log(date)
+			// 格式化日期  实例化
+			var date = new Date();
+			console.log(date)
+			console.log(date.getFullYear())
+			console.log(date.getMonth() + 1)
+			console.log(date.getDate())
+			console.log(date.getDay())
+
+			function getTime() {
+				var time = new Date();
+				var h = time.getHours();
+				h = h > 10 ? h : '0' + h
+				var m = time.getMinutes();
+				m =m > 10 ? m : '0' + m
+				var s = time.getSeconds();
+				s =s > 10 ? s : '0' + s;
+		        return h + ':' + m + ':' + s;
+
+			}console.log(getTime())
+		</script>
+	</body>
+</html>

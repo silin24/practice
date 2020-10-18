@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj = {};
+			var cry = 'call'
+			obj = {
+				uname: '张三疯',
+				age: 18,
+				sex: '男',
+				sayHi: function() {
+					console.log('hi~');
+
+				}
+			}
+			obj.high = 172;
+			console.log(obj)
+			obj['cplor'] = 'pink';
+			// cry 是一个变量
+			obj[cry]=function(){
+				console.log('wang')
+			}
+			obj.high = 200;
+			delete obj.high;
+			console.log(obj)
+			for (var k in obj) {
+				console.log(k,obj[k])
+			}
+			// 遍历对象时只能使用[]方式，因为k 是一个变量
+		</script>
+	</body>
+</html>

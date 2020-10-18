@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box{
+				position: relative;
+				margin: 100px auto ;
+				width: 76px;
+				height: 90px;
+				border: 1px solid #eee;
+				text-align: center;
+				font-size: 14px;
+				
+			}
+			.box img {
+				width: 62px;
+				
+			}
+			.close-btn {
+				display: block;
+				position: absolute;
+				top: -0.0625rem;
+				left: -16px;
+				width: 14px;
+				height: 14px;
+				text-align: center;
+				line-height: 14px;
+				border: 1px solid #eee;
+				cursor: pointer;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			手机淘宝
+			<img src="TB.png" alt="">
+			<i class="close-btn">×</i>
+		</div>
+		<script type="text/javascript">
+			var btn = document.querySelector('.close-btn');
+			var box = document.querySelector('.box');
+			btn.onclick=function(){
+				box.style.display='none';
+			}
+		</script>
+	</body>
+</html>

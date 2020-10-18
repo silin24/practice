@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button id='btn'>开关灯</button>
+		<script type="text/javascript">
+			
+		var btn = document.getElementById('btn')
+		var body = document.body
+		var flag = 0;
+		btn.onclick = function(){
+			if(flag==0){
+				body.style.backgroundColor='black';
+				flag = 1
+			}else{
+				body.style.backgroundColor='#fff';
+				flag=0
+				
+			}
+		}
+		
+		
+		
+		</script>
+	</body>
+</html>
